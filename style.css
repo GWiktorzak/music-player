@@ -34,14 +34,15 @@ body {
   min-height: 100vh;
   background: var(--primary-body-color);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   font-family: Spartan, sans-serif;
   font-size: 12px;
 }
 
 .player-container {
-  margin-top: 32px;
+  margin-top: 120px;
   height: 500px;
   width: 400px;
   background: var(--primary-container-color);
@@ -212,12 +213,47 @@ input:checked + .slider::before {
   margin-right: 5px;
 }
 
+.github-link {
+  padding: 16px;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-github {
+  font-size: 20px;
+}
+/* Error Page */
+.error-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-container-color)
+}
+
+  
+.error-page h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  color: var(--primary-progress-color);
+}
+
+.error-page p {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  color: var(--primary-progress-color);
+}
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
   .player-container {
     width: 95vw;
-    margin-top: 64px;
   }
 
   .img-container {
@@ -257,15 +293,18 @@ input:checked + .slider::before {
     left: 50px;
   }
   .player-container {
-    margin-top: 32px;
     height: 400px;
     width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 64px;
   }
   .player-controls {
     top: -10px;
     left: 70px;
     }
+}
+
+@media screen and (max-width: 737px) and (orientation : landscape) {
+  .toggle-text {
+    visibility: hidden;
+    font-size: 8px;
+  }
 }
